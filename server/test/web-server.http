@@ -1,0 +1,39 @@
+POST http://localhost:8080/api/rooms HTTP/1.1
+Content-Type: application/json
+
+{
+  "theme": "test room 2"
+}
+
+###
+
+POST  http://localhost:8080/api/rooms/dbbacf7c-5368-428a-86cf-84fdbd166c1a/messages HTTP/1.1
+Content-Type: application/json
+
+{
+  "message": "this is a test message 3"
+}
+
+###
+
+GET http://localhost:8080/api/rooms HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/rooms/dbbacf7c-5368-428a-86cf-84fdbd166c1a/messages HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/rooms/dbbacf7c-5368-428a-86cf-84fdbd166c1a/messages/1a4c55e6-47a6-4f35-88b5-4caf195248d6 HTTP/1.1
+
+###
+
+PATCH http://localhost:8080/api/rooms/dbbacf7c-5368-428a-86cf-84fdbd166c1a/messages/1a4c55e6-47a6-4f35-88b5-4caf195248d6/react HTTP/1.1
+
+###
+
+DELETE http://localhost:8080/api/rooms/dbbacf7c-5368-428a-86cf-84fdbd166c1a/messages/1a4c55e6-47a6-4f35-88b5-4caf195248d6/react HTTP/1.1
+
+###
+
+PATCH http://localhost:8080/api/rooms/dbbacf7c-5368-428a-86cf-84fdbd166c1a/messages/f54c07ca-cbe2-45d6-9e47-fb83c979b2c2/answer HTTP/1.1
